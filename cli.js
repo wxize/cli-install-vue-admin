@@ -24,14 +24,17 @@ if( shell.exec(`git clone --no-checkout ${url} ${root}`).code !== 0 ) {
 shell.cd(root)
 
 shell.exec('git reset --hard HEAD')
+
 shell.rm('-rf', './.git')
 
 
-shell.exec('npm install --registry=https://registry.npm.taobao.org -dd')
+// shell.exec('npm install --registry=https://registry.npm.taobao.org -dd')
+
+shell.echo(`	\n Install Parts: npm install --registry=https://registry.npm.taobao.org	\n`)
 
 shell.echo(`	\n Start Up: npm run dev	\n`)
 
-shell.exec('npm run dev')
+// shell.exec('npm run dev')
 
 
 
